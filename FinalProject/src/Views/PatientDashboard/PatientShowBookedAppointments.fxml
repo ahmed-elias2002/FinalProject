@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="1050.0" style="-fx-background-color: #1a1f35;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.PatientDashboradControllers.PatientShowBookedAppointmentsController">
+    <children>
+        <VBox alignment="TOP_CENTER" prefHeight="576.0" prefWidth="256.0" style="-fx-background-color: #20283f;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#ShowFreeAppointmentsBtnHandle" prefHeight="45.0" prefWidth="284.0" style="-fx-background-color: #20283f; -fx-text-fill: #fefeff;" text="Show Free Appointments">
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+                </Button>
+                <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="395.0" style="-fx-background-color: #fefeff; -fx-text-fill: #20283f;" text="Show Booked Appointments">
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+                </Button>
+                <Button fx:id="btnOverview5" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#logOutBtn" prefHeight="45.0" prefWidth="398.0" style="-fx-background-color: #20283f; -fx-text-fill: #fefeff;" text="Logout">
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+                </Button>
+            </children>
+            <padding>
+                <Insets top="60.0" />
+            </padding>
+        </VBox>
+        <AnchorPane layoutX="256.0" prefHeight="60.0" prefWidth="794.0" style="-fx-background-color: #161b32;">
+            <children>
+                <Label layoutX="14.0" layoutY="8.0" prefHeight="45.0" prefWidth="276.0" text="Show Booked Appointments" textFill="#fefeff">
+                    <font>
+                        <Font name="System Bold" size="20.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+      <TableView fx:id="tableView" layoutX="329.0" layoutY="120.0" prefHeight="390.0" prefWidth="649.0">
+        <columns>
+          <TableColumn fx:id="tcIdAppointments" prefWidth="101.0" text="ID Apponitment" />
+          <TableColumn fx:id="tcIdDoctor" prefWidth="109.0" text="ID Doctor" />
+          <TableColumn fx:id="tcStatusAppointments" minWidth="0.0" prefWidth="102.0" text="Status" />
+            <TableColumn fx:id="tcComment" prefWidth="336.0" text="Doctor Comment" />
+        </columns>
+      </TableView>
+      <RadioButton layoutX="334.0" layoutY="79.0" mnemonicParsing="false" onAction="#WaitingAppointmentsHandle" selected="true" text="Waiting Appointments" textFill="WHITE">
+         <toggleGroup>
+            <ToggleGroup fx:id="appointmentsStatusGroup" />
+         </toggleGroup>
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </RadioButton>
+      <RadioButton layoutX="509.0" layoutY="79.0" mnemonicParsing="false" onAction="#FinishedAppointmentsHandle" text="Finished Appointments" textFill="WHITE" toggleGroup="$appointmentsStatusGroup">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></RadioButton>
+      <AnchorPane layoutX="-1.0" layoutY="-1.0" prefHeight="60.0" prefWidth="256.0">
+         <children>
+            <Label layoutX="51.0" layoutY="15.0" text="Patient Dashboard" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Button layoutX="640.0" layoutY="520.0" mnemonicParsing="false" onAction="#refreshHandle" prefHeight="30.0" prefWidth="70.0" text="Refresh">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+    </children>
+    <effect>
+        <DropShadow color="#1b1eeb" />
+    </effect>
+</AnchorPane>

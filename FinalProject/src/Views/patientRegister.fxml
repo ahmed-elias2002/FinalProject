@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="491.0" prefWidth="946.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.patientRegisterController">
+   <children>
+      <AnchorPane layoutX="393.0" layoutY="39.0" prefHeight="424.0" prefWidth="519.0" style="-fx-background-color: #20283f;">
+         <children>
+            <TextField fx:id="userNametxt" layoutX="24.0" layoutY="83.0" prefHeight="35.0" prefWidth="226.0" promptText="User Name" style="-fx-background-color: #1a1f35; -fx-border-color: #fefeff;" />
+            <PasswordField fx:id="passwordtxt" layoutX="269.0" layoutY="84.0" prefHeight="35.0" prefWidth="226.0" promptText="password" style="-fx-background-color: #1a1f35; -fx-border-color: #fefeff;" />
+            <Label layoutX="224.0" layoutY="31.0" prefHeight="31.0" prefWidth="91.0" text="Sign Up" textAlignment="CENTER" textFill="#fefeff">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="firstNametxt" layoutX="25.0" layoutY="133.0" prefHeight="35.0" prefWidth="226.0" promptText="First Name" style="-fx-background-color: #1a1f35; -fx-border-color: #fefeff;" />
+            <TextField fx:id="lastNametxt" layoutX="269.0" layoutY="134.0" prefHeight="35.0" prefWidth="226.0" promptText="Last Name" style="-fx-background-color: #1a1f35; -fx-border-color: #fefeff;" />
+            <TextField fx:id="agetxt" layoutX="25.0" layoutY="184.0" prefHeight="35.0" prefWidth="226.0" promptText="Age" style="-fx-background-color: #1a1f35; -fx-border-color: #fefeff;" />
+            <TextField fx:id="emailtxt" layoutX="269.0" layoutY="184.0" prefHeight="35.0" prefWidth="226.0" promptText="email" style="-fx-background-color: #1a1f35; -fx-border-color: #fefeff;" />
+            <TextField fx:id="phonetxt" layoutX="25.0" layoutY="233.0" prefHeight="35.0" prefWidth="226.0" promptText="phone" style="-fx-background-color: #1a1f35; -fx-border-color: #fefeff;" />
+            <Label layoutX="29.0" layoutY="299.0" text="Role:" textFill="#fefeff">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="admin" layoutX="105.0" layoutY="305.0" mnemonicParsing="false" text="Admin" textFill="#fefeff">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="roleGroup" />
+               </toggleGroup>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </RadioButton>
+            <RadioButton layoutX="180.0" layoutY="305.0" mnemonicParsing="false" text="Patient" textFill="#fefeff" toggleGroup="$roleGroup">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </RadioButton>
+            <Label layoutX="28.0" layoutY="342.0" text="Gender:" textFill="#fefeff">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            <RadioButton layoutX="125.0" layoutY="349.0" mnemonicParsing="false" text="Male" textFill="#fefeff">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="genderGroup" />
+               </toggleGroup>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </RadioButton>
+            <RadioButton layoutX="201.0" layoutY="349.0" mnemonicParsing="false" text="Female" textFill="#fefeff" toggleGroup="$genderGroup">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </RadioButton>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="493.0" fitWidth="1078.0" layoutX="-372.0" opacity="0.2" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/WhatsApp%20Image%202023-05-21%20at%207.53.23%20PM.jpeg" />
+         </image>
+      </ImageView>
+      <Label layoutX="44.0" layoutY="152.0" prefHeight="49.0" prefWidth="309.0" text="Welcom to our Clinic" textFill="#fefeff">
+         <font>
+            <Font name="System Bold" size="31.0" />
+         </font>
+      </Label>
+      <Label layoutX="59.0" layoutY="219.0" text="Anything you need, Enroll now." textFill="#fefeff">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="submitBtn" layoutX="59.0" layoutY="258.0" mnemonicParsing="false" onAction="#submitBtn" prefHeight="47.0" prefWidth="215.0" style="-fx-background-color: #fefeff;" text="Submit" textFill="#20283f">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>

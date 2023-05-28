@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="417.0" prefWidth="460.0" style="-fx-background-color: #e1e8f2;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AdminDashboardControllers.UpdateUserPageController">
+   <children>
+      <AnchorPane layoutY="-1.0" prefHeight="418.0" prefWidth="460.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="132.0" layoutY="14.0" prefHeight="46.0" prefWidth="210.0" text="Update Patient" textFill="#3f4c6f">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </Label>
+            <Button layoutX="174.0" layoutY="342.0" mnemonicParsing="false" onAction="#saveHandle" prefHeight="32.0" prefWidth="83.0" style="-fx-background-color: #3f4c6f;" styleClass="saveButton" text="Save" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <TextField fx:id="lastNameTextField" layoutX="256.0" layoutY="168.0" prefHeight="25.0" prefWidth="150.0" />
+            <TextField fx:id="firstNameTextField" layoutX="61.0" layoutY="168.0" prefHeight="25.0" prefWidth="150.0" />
+            <Label layoutX="61.0" layoutY="72.0" prefHeight="19.0" prefWidth="69.0" text="Username:">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Label>
+            <TextField fx:id="usernameTextField" layoutX="61.0" layoutY="104.0" prefHeight="25.0" prefWidth="150.0" />
+            <TextField fx:id="emailTextField" layoutX="256.0" layoutY="104.0" prefHeight="25.0" prefWidth="150.0" />
+            <TextField fx:id="ageTextField" layoutX="61.0" layoutY="236.0" prefHeight="25.0" prefWidth="150.0" />
+            <RadioButton fx:id="femaleBtn" layoutX="123.0" layoutY="292.0" mnemonicParsing="false" text="Female">
+               <toggleGroup>
+                  <ToggleGroup fx:id="genderGroup" />
+               </toggleGroup>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </RadioButton>
+            <RadioButton fx:id="maleBtn" layoutX="62.0" layoutY="292.0" mnemonicParsing="false" text="Male" toggleGroup="$genderGroup">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></RadioButton>
+            <Label layoutX="62.0" layoutY="267.0" text="Gender:">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Label>
+            <TextField fx:id="phoneTextField" layoutX="256.0" layoutY="236.0" prefHeight="25.0" prefWidth="150.0" />
+            <Label layoutX="256.0" layoutY="72.0" prefHeight="19.0" prefWidth="39.0" text="Email:">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="68.0" layoutY="140.0" prefHeight="19.0" prefWidth="77.0" text="First Name:">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="257.0" layoutY="140.0" prefHeight="19.0" prefWidth="77.0" text="Last Name:">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="257.0" layoutY="205.0" prefHeight="19.0" prefWidth="48.0" text="Phone:">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="62.0" layoutY="205.0" prefHeight="19.0" prefWidth="33.0" text="Age:">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

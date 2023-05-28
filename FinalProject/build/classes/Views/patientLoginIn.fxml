@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="491.0" prefWidth="946.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.patientLoginInController">
+   <children>
+      <AnchorPane layoutX="586.0" layoutY="39.0" prefHeight="424.0" prefWidth="326.0" style="-fx-background-color: #20283f;">
+         <children>
+            <TextField fx:id="usreNametxt" layoutX="24.0" layoutY="127.0" prefHeight="35.0" prefWidth="270.0" promptText="User Name" style="-fx-background-color: #1a1f35; -fx-border-color: #fefeff;" />
+            <PasswordField fx:id="passwordtxt" layoutX="25.0" layoutY="216.0" prefHeight="35.0" prefWidth="270.0" promptText="password" style="-fx-background-color: #1a1f35; -fx-border-color: #fefeff;" />
+            <Button layoutX="25.0" layoutY="294.0" mnemonicParsing="false" onAction="#loginBtn" prefHeight="39.0" prefWidth="270.0" style="-fx-background-color: #fefeff;" text="Log In" textFill="#20283f">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Label layoutX="80.0" layoutY="43.0" prefHeight="38.0" prefWidth="170.0" text="Patient Sign In" textFill="#fefeff">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Button layoutX="104.0" layoutY="347.0" mnemonicParsing="false" onAction="#adminSignInBtn" prefHeight="26.0" prefWidth="118.0" style="-fx-background-color: #20283f;" text="Admin sign in" textFill="#fefeff">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="493.0" fitWidth="1078.0" layoutX="-204.0" layoutY="-1.0" opacity="0.2" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/WhatsApp%20Image%202023-05-21%20at%207.53.23%20PM.jpeg" />
+         </image>
+      </ImageView>
+      <Label layoutX="92.0" layoutY="152.0" prefHeight="49.0" prefWidth="314.0" text="Welcom to our Clinic" textFill="#fefeff">
+         <font>
+            <Font name="System Bold" size="31.0" />
+         </font>
+      </Label>
+      <Button layoutX="96.0" layoutY="262.0" mnemonicParsing="false" onAction="#SignUpBtn" prefHeight="39.0" prefWidth="187.0" style="-fx-background-color: #fefeff;" text="Sign Up" textFill="#20283f">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Label layoutX="98.0" layoutY="218.0" text="Anything you need, Enroll now." textFill="#fefeff">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
